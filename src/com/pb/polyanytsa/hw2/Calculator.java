@@ -1,29 +1,28 @@
 import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
-        double operand1 ;
-        double operand2 ;
-        double otvet;
-        char znak;
-        Scanner reader = new Scanner(System.in);
+        int operand1 ;
+        int operand2 ;
+        String znak;
+        Scanner in = new Scanner(System.in);
         System.out.print("введите 2 числа для расчетов: ");
-        operand1  = reader.nextDouble();
-        operand2  = reader.nextDouble();
+        operand1  = in.nextInt();
+        operand2  = in.nextInt();
         System.out.print("\nВведите арифметический знак (+, -, *, /): ");
-        znak = reader.next().charAt(0);
+        znak = in.next();
         switch(znak) {
-            case '+': otvet = operand1  + operand2 ;
+            case "+":
+                System.out.print ("Результат вычисления:"+(operand1 + operand2));
                 break;
-            case '-': otvet = operand1  - operand2 ;
+            case "-": System.out.print ("Результат вычисления:"+(operand1 - operand2));
                 break;
-            case '*': otvet = operand1  * operand2 ;
+            case "*": System.out.print ("Результат вычисления:"+(operand1 * operand2));
                 break;
-            case '/': otvet = operand1  / operand2 ;
-                break;
-            default:  System.out.printf("Ошибка");
-                return;
+            case "/":
+            if (operand2 == 0)
+                System.out.print ("Ошибка! На ноль делить нельзя");
+            else
+                System.out.print ("Результат вычисления:"+(operand1 / operand2));
         }
-        System.out.print("\nРезультат вычисления:\n");
-        System.out.printf(operand1  + " " + znak + " " + operand2  + " = " + otvet);
     }
 }
