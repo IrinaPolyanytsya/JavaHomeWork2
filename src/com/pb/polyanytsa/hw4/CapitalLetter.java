@@ -1,7 +1,6 @@
 package com.pb.polyanytsa.hw4;
 import java.util.Scanner;
 public class CapitalLetter {
-
         public static void main(String[] args) {
             String str = null;
             String str2 = null;
@@ -15,6 +14,7 @@ public class CapitalLetter {
                     str2=str.substring(0,1).toUpperCase()+str.substring(1);
                 }
             }
-            System.out.println("Все слова с большой буквы:"+str2);
+            System.out.println("Все ваши слова с большой буквы: "+str2);
         }
 }
+
