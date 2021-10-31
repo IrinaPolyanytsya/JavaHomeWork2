@@ -3,25 +3,42 @@ import java.util.Scanner;
 import java.util.Arrays;
 public class Anagram {
     public static void main(String[] args) {
-        String str = null;
-        String str2 = null;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Введи предложение 1: ");
-        str = sc.nextLine();
-        System.out.println("Введи предложение 2: ");
-        str2 = sc.nextLine();
-        String s1 = str.replaceAll("\\W", "");
-        String s2 = str2.replaceAll("\\W", "");
+        String str = setInputData(1);
+        String str2 = setInputData(2);
+        String s1 = transformateString(str);
+        String s2 = transformateString(str2);
         boolean status = true;
         if (s1.length() != s2.length()) {
             status = false;
         } else {
-            char[] ArrayS1 = s1.toLowerCase().toCharArray();
-            char[] ArrayS2 = s2.toLowerCase().toCharArray();
-            Arrays.sort(ArrayS1);
-            Arrays.sort(ArrayS2);
+            char[] ArrayS1 = getSortedArrayFromString(s1);
+            char[] ArrayS2 = getSortedArrayFromString(s2);
             status = Arrays.equals(ArrayS1, ArrayS2);
         }
+        printResult(status);
+    }
+
+    public static String setInputData(int number) {
+        String str = null;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введи предложение "+ number+ " : ");
+        str = sc.nextLine();
+        return str;
+    }
+
+    public static String transformateString(String str) {
+        str = str.replaceAll("[^a-zA-Zа-яА-Я]", "");
+        str = str.toLowerCase();
+        return str;
+    }
+
+    public static char[] getSortedArrayFromString(String str) {
+        char[] array1 = str.toCharArray();
+        Arrays.sort(array1);
+        return array1;
+    }
+
+    public static void printResult(boolean status) {
         if (status) {
             System.out.println("Урааа! Эти две фразы - анаграмма");
         } else {
