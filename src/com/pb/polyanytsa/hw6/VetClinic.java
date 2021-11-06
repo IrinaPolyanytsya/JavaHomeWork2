@@ -39,16 +39,16 @@ public class VetClinic {
                 Veterinarian.treatAnimal(animals[i]);
                 System.out.println("            ");
             }
+            System.out.println("Hashcode животних: ");
+            System.out.println("Hashcode cat: " + cat.hashCode());
+            System.out.println("Hashcode dog: " + dog.hashCode());
+            System.out.println("Hashcode horse: " + horse.hashCode());
+            System.out.println(" ");
             System.out.println("Сравнение: ");
             System.out.println("Equal cat&dog: " + cat.equals(dog));
             System.out.println("Equal cat&cat: " + cat.equals(cat));
             System.out.println("Equal horse&cat: " + horse.equals(cat));
             System.out.println("Equal horse&horse: " + horse.equals(horse));
-            System.out.println(" ");
-            System.out.println("Hashcode животних: ");
-            System.out.println("Hashcode cat: " + cat.hashCode());
-            System.out.println("Hashcode dog: " + dog.hashCode());
-            System.out.println("Hashcode horse: " + horse.hashCode());
             System.out.println(" ");
             System.out.println("Все животные на прием 4 ноября 2021 года: ");
 
