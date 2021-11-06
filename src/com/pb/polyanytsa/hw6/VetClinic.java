@@ -6,13 +6,13 @@ public class VetClinic {
     public static void main(String[] args) throws Exception {
 
         Cat cat = new Cat();
-        cat.setFood("Корм 'Kitekat '");
+        cat.setFood("Корм 'Kitekat'");
         cat.setLocation("Кременчуг");
         cat.setName("Кошка Катастрофа");
         cat.setGender("male");
 
         Horse horse = new Horse();
-        horse.setName("Лошадь Бриз ");
+        horse.setName("Лошадь Бриз");
         horse.setFood("Сено");
         horse.setParticipationRaces('Y');
         horse.setLocation("Киев");
@@ -39,10 +39,13 @@ public class VetClinic {
                 Veterinarian.treatAnimal(animals[i]);
                 System.out.println("            ");
             }
-            System.out.println(" ");
+            System.out.println("Сравнение: ");
             System.out.println("Equal cat&dog: " + cat.equals(dog));
             System.out.println("Equal cat&cat: " + cat.equals(cat));
+            System.out.println("Equal horse&cat: " + horse.equals(cat));
+            System.out.println("Equal horse&horse: " + horse.equals(horse));
             System.out.println(" ");
+            System.out.println("Hashcode животних: ");
             System.out.println("Hashcode cat: " + cat.hashCode());
             System.out.println("Hashcode dog: " + dog.hashCode());
             System.out.println("Hashcode horse: " + horse.hashCode());

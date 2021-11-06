@@ -32,7 +32,7 @@ public class Horse extends Animal{
 
     @Override
     public void eat() {
-        System.out.println(getName()+" есть овес");
+        System.out.println(getName()+" ест сено");
     }
 
     @Override
