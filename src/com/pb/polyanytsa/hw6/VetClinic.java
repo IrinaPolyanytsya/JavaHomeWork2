@@ -44,14 +44,15 @@ public class VetClinic {
             System.out.println("Hashcode dog: " + dog.hashCode());
             System.out.println("Hashcode horse: " + horse.hashCode());
             System.out.println(" ");
+
             System.out.println("Сравнение: ");
             System.out.println("Equal cat&dog: " + cat.equals(dog));
             System.out.println("Equal cat&cat: " + cat.equals(cat));
             System.out.println("Equal horse&cat: " + horse.equals(cat));
             System.out.println("Equal horse&horse: " + horse.equals(horse));
             System.out.println(" ");
-            System.out.println("Все животные на прием 4 ноября 2021 года: ");
 
+            System.out.println("Все животные на прием 4 ноября 2021 года: ");
             Animal[] animals1 = new Animal[]{cat, horse, dog};
             String[] output1 = new String[animals.length];
             for (int i = 0; i < animals.length; i++) {
