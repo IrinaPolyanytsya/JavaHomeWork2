@@ -35,7 +35,7 @@ public class VetClinic {
         String[] output = new String[animals.length];
         if (obj instanceof Veterinarian) {
             for (int i = 0; i < animals.length; i++) {
-                System.out.println("Ожидают приема врача: ");
+                System.out.println("Ожидаидает приема ветеринара: ");
                 Veterinarian.treatAnimal(animals[i]);
                 System.out.println("            ");
             }
@@ -47,13 +47,13 @@ public class VetClinic {
             System.out.println("Hashcode dog: " + dog.hashCode());
             System.out.println("Hashcode horse: " + horse.hashCode());
             System.out.println(" ");
-            System.out.println("Ожидают приема в клинику: ");
+            System.out.println("Все животные на прием 4 ноября 2021 года: ");
 
             Animal[] animals1 = new Animal[]{cat, horse, dog};
             String[] output1 = new String[animals.length];
             for (int i = 0; i < animals.length; i++) {
                 output[i] = animals[i].getName();
-                System.out.println("[Животное: " + animals[i].getName() + "] ");
+                System.out.println("Животное: " + animals[i].getName() + " ");
             }
             System.out.println(" ");
 
