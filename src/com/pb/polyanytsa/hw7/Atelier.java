@@ -6,15 +6,19 @@ public class Atelier {
 
         Clothes [] clothes={
                 new Tshirt(Size.S, "красный", 545),
+
                 new Tshirt(Size.XXS, "голубой", 300),
 
                 new Pants(Size.XXS, "лазурный", 700),
+
                 new Pants(Size.L, "черный", 950),
 
                 new Skirt(Size.XXS, "бежевый", 1000),
+
                 new Skirt(Size.M, "мятный", 750),
 
                 new Tie(Size.XS, "розовый", 300),
+
                 new Tie(Size.S, "белый", 458),
         };
 
